@@ -1,0 +1,124 @@
+@keyframes slideFromLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideFromRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideFromBottom {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.skills-container {
+  padding: 4rem 2rem;
+  background-color: #f9f9f9;
+  text-align: center;
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.5s ease; /* Smooth fade-in effect */
+}
+
+.skills-container.visible {
+  opacity: 1;
+}
+
+.skills-container h1 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 2rem;
+}
+
+.skills-wrapper {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.skills-card {
+  flex: 1;
+  max-width: 300px;
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 350px;
+}
+
+.skills-container.visible .skills-card.left {
+  animation: slideFromLeft 1s ease;
+}
+
+.skills-container.visible .skills-card.middle {
+  animation: slideFromBottom 1s ease;
+}
+
+.skills-container.visible .skills-card.right {
+  animation: slideFromRight 1s ease;
+}
+
+.skills-card:hover {
+  transform: scale(1.05); /* Zoom-in effect on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhance shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skills-card h2 {
+  font-size: 1.5rem;
+  color: #007bff;
+  margin-bottom: 1rem;
+  transition: color 0.3s ease;
+}
+
+.skills-card:hover h2 {
+  color: #0056b3; /* Darker shade on hover */
+}
+
+.skills-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.skills-card ul li {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 0.5rem;
+}
+
+@media screen and (max-width: 768px) {
+  .skills-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .skills-card {
+    max-width: 100%;
+    width: 90%;
+    margin-bottom: 2rem;
+  }
+}

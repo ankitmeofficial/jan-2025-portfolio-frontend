@@ -1,0 +1,186 @@
+/* Container Styling */
+.home-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 4rem;
+  background-color: #f9f9f9;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+/* Text Section */
+.text-container {
+  flex: 1;
+  max-width: 50%;
+}
+
+.text-container h1 {
+  font-size: 2.75rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.text-container h2 {
+  font-size: 1.75rem;
+  color: #333;
+  font-weight: bold;
+  margin: 1rem 0;
+}
+
+.text-container p {
+  font-size: 1.2rem;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+/* Button Styling */
+.see-more-btn {
+  padding: 0.8rem 2rem;
+  font-size: 1rem;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.see-more-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Image Section Styling */
+.image-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.image-container img {
+  width: 450px;
+  height: 450px;
+  border-radius: 50%;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.image-container img:hover {
+  transform: scale(1.1);
+}
+
+/* Animation for Dynamic Roles */
+.animated-role {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #007bff;
+  display: inline-block;
+  animation: slideUp 2s ease-in-out;
+}
+
+/* Slide-up Animation */
+@keyframes slideUp {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+}
+
+/* Specific Colors for Each Role */
+.animated-role:nth-child(1) {
+  color: #ff5733; /* Orange for 'UI/UX Design' */
+}
+
+.animated-role:nth-child(2) {
+  color: #28a745; /* Green for 'Web Developer' */
+}
+
+.animated-role:nth-child(3) {
+  color: #6f42c1; /* Purple for 'Logo Design' */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .home-container {
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem;
+  }
+
+  .text-container {
+    max-width: 100%;
+  }
+
+  .text-container h1 {
+    font-size: 2.5rem;
+  }
+
+  .text-container h2 {
+    font-size: 2rem;
+  }
+
+  .image-container {
+    margin-top: 2rem;
+  }
+}
+
+
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  width: 80%; /* Increased width */
+  height: 70%; /* Increased height */
+  padding: 30px; /* Increased padding */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  border-radius: 10px;
+  overflow-y: auto; /* Allow scrolling within the popup if content overflows */
+}
+
+.popup-content {
+  text-align: center;
+}
+
+.close-popup-btn {
+  margin-top: 20px;
+  padding: 10px 15px;
+  background-color: #ff5733;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.close-popup-btn:hover {
+  background-color: #ff7845;
+}
+
+/* Optional: Add a backdrop for the popup */
+.popup::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+}
