@@ -12,7 +12,7 @@
 
 .projects-wrapper {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: stretch;
   gap: 2rem;
   flex-wrap: wrap;

@@ -1,73 +1,88 @@
 /* Reset styles */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box; /* Ensure padding and border are included in element size */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  overflow-x: hidden;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #f9f9f9;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  transition: top 0.3s;
+}
+
+.hidden {
+  top: -80px; /* Hide header when scrolling down */
+}
+
+.logo img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.hamburger {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  font-size: 1rem;
+  color: #555;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #007bff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block; /* Show hamburger icon on mobile */
   }
-  
-  body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    overflow-x: hidden; /* Prevent horizontal scrollbar */
-  }
-  
-  .header {
-    position: fixed;
-    top: 0;
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: #f9f9f9;
+    position: absolute;
+    top: 70px;
     left: 0;
     width: 100%;
-    background-color: #f9f9f9;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
-    height: 70px;
+    padding: 1rem 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    gap: 1rem;
   }
-  
-  .logo img {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
+
+  .nav-links.active {
+    display: flex; /* Show menu when active */
+  }
 }
-  
-  .nav-links {
-    display: flex;
-    gap: 1.5rem;
-  }
-  
-  .nav-links a {
-    text-decoration: none;
-    font-size: 1rem;
-    color: #555;
-    cursor: pointer;
-    transition: color 0.3s;
-  }
-  
-  .nav-links a:hover {
-    color: #007bff;
-  }
-  
-  .section {
-    min-height: calc(100vh - 70px); /* Subtract header height from viewport height */
-    padding: 2rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-bottom: 1px solid #eee;
-    width: 100vw; /* Ensure sections take full width of the viewport */
-  }
-  
-  .section:nth-child(odd) {
-    background-color: #f4f4f4;
-  }
-  
-  .section:nth-child(even) {
-    background-color: #eaeaea;
-  }
-  
-  .section:last-child {
-    border-bottom: none; /* Remove bottom border for the last section */
-  }
-  
+/* 
+.text-container h2{
+  font-weight: 900;
+} */
