@@ -15,7 +15,7 @@ const Home = () => {
     }, 2000); // Change role every 2 seconds
 
     return () => clearInterval(interval); // Cleanup the interval on unmount
-  }, []);
+  }, [roles.length]); // Add roles.length as a dependency
 
   return (
     <div className="home-container">
