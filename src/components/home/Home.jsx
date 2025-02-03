@@ -21,7 +21,7 @@ const Home = () => {
     <div className="home-container">
       {/* Text Section */}
       <div className="text-container">
-        <h2 style={{ color: "#ff5733" }}>Hello, It's Me</h2>
+        <h2 style={{     color: "#BB86FC" }}>Hello, It's Me</h2>
         <h1>I'm Ankit Kumar Singh</h1>
         <h2>
           I am a <span className="animated-role">{roles[roleIndex]}</span>

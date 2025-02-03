@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-scroll";
 import "./Header.css";
-import profilelogo from "./it_smelogo.jpg";
+import profilelogo from "./it_smelogo.png";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
