@@ -4,7 +4,9 @@
   justify-content: space-between;
   height: 100vh;
   padding: 2rem;
-  background-color: #f4f4f4;
+  /* background-color: #f4f4f4; */
+  background-color: #1F1F1F;
+  color: #E0E0E0;
   flex-wrap: wrap; /* Allow elements to wrap on smaller screens */
 }
 
@@ -31,25 +33,29 @@
 
 .text-section h1 {
   font-size: 2.5rem;
-  color: #333;
+  color: #ffffff;
 }
 
 .text-section h2 {
   font-size: 2rem;
-  color: #007bff;
+  /* color: #007bff;  */
+  /* background-color: #BB86FC; */
+  color: #BB86FC;
   margin: 0.5rem 0;
 }
 
 .text-section p {
   font-size: 1.2rem;
-  color: #555;
+  color: #ffffff;
   margin: 1rem 0;
   line-height: 1.6;
 }
 
 .download-cv-btn {
-  background-color: #007bff;
-  color: #fff;
+  /* background-color: #007bff;
+  color: #fff; */
+  background-color: #ac9ac1;
+  color: #000000;
   border: none;
   padding: 0.8rem 1.5rem;
   font-size: 1rem;
@@ -59,7 +65,8 @@
 }
 
 .download-cv-btn:hover {
-  background-color: #0056b3;
+  /* background-color: #0056b3; */
+  background-color: #BB86FC;
 }
 
 /* Responsive Styles */

@@ -4,9 +4,9 @@ import "./Projects.css";
 const Projects = () => {
   const projects = [
     {
-      title: "Hackathon Project: Toy and Games Website",
+      title: "Hackathon:Toy and Games Website",
       description:
-        "Developed a fully responsive website for a hackathon with interactive features. Built using the MERN stack (MongoDB, Express, React, Node.js).",
+        "Developed a website for a hackathon with interactive features. Built using the MERN stack (MongoDB, Express, React, Node.js).",
     },
     {
       title: "Math Adventure Game",

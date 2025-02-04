@@ -14,15 +14,34 @@ const Contact = () => {
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    alert("Form Submitted Successfully!");
-    setFormData({
-      name: "",
-      email: "",
-      phone: "",
-      message: "",
-    });
+
+    try {
+      const response = await fetch("https://jan-2025-portfolio-backend.onrender.com/submit-form", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        alert("Form Submitted Successfully!");
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          message: "",
+        });
+      } else {
+        alert(`Error: ${data.error}`);
+      }
+    } catch (error) {
+      alert("Something went wrong. Please try again later.");
+    }
   };
 
   return (

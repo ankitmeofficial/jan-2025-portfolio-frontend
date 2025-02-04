@@ -38,8 +38,10 @@
   
   .contact-form {
     flex: 1;
-    padding: 1rem;
+    padding: 2.25rem;
     background-color: #fff;
+    background-color: #1F1F1F;
+    /* color: #E0E0E0; */
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
