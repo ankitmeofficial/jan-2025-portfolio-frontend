@@ -58,7 +58,6 @@ const Skills = () => {
           <h2>Tools/Software</h2>
           <ul>
             <li>Visual Studio Code</li>
-            <li>Git</li>
             <li>GitHub</li>
             <li>Figma (UI/UX Design)</li>
           </ul>

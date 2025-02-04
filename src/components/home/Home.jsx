@@ -7,7 +7,7 @@ const Home = () => {
   const textRef = useRef(null);
   const [roleIndex, setRoleIndex] = useState(0);
 
-  const roles = ["UI/UX Design", "Web Developer", "Logo Design"];
+  const roles = ["Full Stack Web Developer", "Logo Design"];
 
   useEffect(() => {
     const interval = setInterval(() => {
